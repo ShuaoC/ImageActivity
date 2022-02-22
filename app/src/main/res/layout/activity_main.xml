@@ -10,26 +10,38 @@
         android:id="@+id/RecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/description" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="355dp"
-        android:layout_height="51dp"
-        android:text="TextView"
+        android:id="@+id/name"
+        android:layout_width="367dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="1dp"
+        android:text="Select a game:"
+        android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/gameView" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="164dp"
-        android:layout_height="125dp"
+        android:id="@+id/gameView"
+        android:layout_width="408dp"
+        android:layout_height="211dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="367dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
