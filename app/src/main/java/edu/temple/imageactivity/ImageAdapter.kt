@@ -1,10 +1,10 @@
 package edu.temple.imageactivity
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
 class ImageAdapter(_ImageObject : Array<ImageObject>, _myFunc : (ImageObject)->Unit) : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>(){
@@ -13,12 +13,12 @@ class ImageAdapter(_ImageObject : Array<ImageObject>, _myFunc : (ImageObject)->U
     val myEventHandlingFunc = _myFunc
 
     inner class ImageViewHolder(_view: View) : RecyclerView.ViewHolder(_view) {
-        val colorNameTextView = _view.findViewById<TextView>(R.id.textView2)
-        val colorDisplayView = _view.findViewById<View>(R.id.imageView2)
+        val ImageText = _view.findViewById<TextView>(R.id.textView2)
+        val Image = _view.findViewById<View>(R.id.imageView2)
 
-        lateinit var colorObject: ImageObject
+        lateinit var imageObject: ImageObject
         init {
-            _view.setOnClickListener{myEventHandlingFunc(colorObject)}
+            _view.setOnClickListener{myEventHandlingFunc(imageObject)}
         }
     }
 
@@ -29,10 +29,9 @@ class ImageAdapter(_ImageObject : Array<ImageObject>, _myFunc : (ImageObject)->U
     }
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
-        holder.colorNameTextView.text = ImageObjects[position].name
-        holder.colorDisplayView.setBackgroundColor(Color.parseColor(ImageObjects[position].code))
+        holder.ImageText.text = ImageObjects[position].name
 
-        holder.colorObject = ImageObjects[position]
+        holder.imageObject = ImageObjects[position]
     }
 
     override fun getItemCount(): Int {
