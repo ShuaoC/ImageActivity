@@ -9,7 +9,7 @@ The user can click on each game and see the name of the game and the detail desc
 The user can keep scrolling, and there will be more games available. There are total of 12 games.
 ![Screenshot](https://github.com/ShuaoC/ImageActivity/blob/main/screenshot3.png)
 
-Credit for all the game description:
+Credit for all the game description:  
 https://en.wikipedia.org/wiki/Horizon_Forbidden_West
 https://en.wikipedia.org/wiki/God_of_War_Ragnar%C3%B6k
 https://en.wikipedia.org/wiki/Black_Myth:_Wukong
