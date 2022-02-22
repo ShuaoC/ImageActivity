@@ -26,7 +26,8 @@ class ImageActivity : AppCompatActivity() {
             ImageObject("Monster Hunter: World", R.drawable.monster,"Monster Hunter: World is an action role-playing game developed and published by Capcom and the fifth mainline installment in the Monster Hunter series."),
             ImageObject("Spider-Man", R.drawable.spiderman,"Marvel's Spider-Man is a 2018 action-adventure game developed by Insomniac Games and published by Sony Interactive Entertainment."),
             ImageObject("Wolfenstein II", R.drawable.wolfenstein,"Wolfenstein II: The New Colossus is a 2017 action-adventure first-person shooter video game developed by MachineGames and published by Bethesda Softworks."),
-            ImageObject("The Legend of Zelda", R.drawable.zelda,"The Legend of Zelda: Breath of the Wild is a 2017 action-adventure game developed and published by Nintendo for the Nintendo Switch and Wii U consoles.")
+            ImageObject("The Legend of Zelda", R.drawable.zelda,"The Legend of Zelda: Breath of the Wild is a 2017 action-adventure game developed and published by Nintendo for the Nintendo Switch and Wii U consoles."),
+            ImageObject("Red Dead Redemption 2", R.drawable.readdead,"Red Dead Redemption 2 is a 2018 action-adventure game developed and published by Rockstar Games. The game is the third entry in the Red Dead series and is a prequel to the 2010 game Red Dead Redemption.")
         )
 
 
@@ -39,7 +40,7 @@ class ImageActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.RecyclerView)
 
-        recyclerView.layoutManager = GridLayoutManager(this, 1)
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
 
         recyclerView.adapter = ImageAdapter(games, myRecyclerViewFunc)
 

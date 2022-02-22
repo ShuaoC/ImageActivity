@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 class ImageAdapter(_ImageObject : Array<ImageObject>, _myFunc : (ImageObject)->Unit) : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>(){
 
     val ImageObjects = _ImageObject
-    val myEventHandlingFunc = _myFunc
+    val evenhandler = _myFunc
 
     inner class ImageViewHolder(_view: View) : RecyclerView.ViewHolder(_view) {
         val ImageText = _view.findViewById<TextView>(R.id.textView2)
@@ -17,7 +17,7 @@ class ImageAdapter(_ImageObject : Array<ImageObject>, _myFunc : (ImageObject)->U
 
         lateinit var imageObject: ImageObject
         init {
-            _view.setOnClickListener{myEventHandlingFunc(imageObject)}
+            _view.setOnClickListener{evenhandler(imageObject)}
         }
     }
 
