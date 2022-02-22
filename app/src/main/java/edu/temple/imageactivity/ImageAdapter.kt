@@ -30,7 +30,7 @@ class ImageAdapter(_ImageObject : Array<ImageObject>, _myFunc : (ImageObject)->U
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         holder.ImageText.text = ImageObjects[position].name
-
+        holder.Image.setBackgroundResource(ImageObjects[position].drawable)
         holder.imageObject = ImageObjects[position]
     }
 
