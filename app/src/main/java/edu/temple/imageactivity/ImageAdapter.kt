@@ -6,14 +6,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ImageAdapter(_ImageObject : Array<ImageObject>, _myFunc : (ImageObject)->Unit) : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>(){
+class ImageAdapter(_ImageObject : Array<ImageObject>, func : (ImageObject)->Unit) : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>(){
 
     val ImageObjects = _ImageObject
-    val evenhandler = _myFunc
+    val evenhandler = func
 
     inner class ImageViewHolder(_view: View) : RecyclerView.ViewHolder(_view) {
-        val ImageText = _view.findViewById<TextView>(R.id.textView2)
-        val Image = _view.findViewById<View>(R.id.imageView2)
+        val ImageText = _view.findViewById<TextView>(R.id.name)
+        val Image = _view.findViewById<View>(R.id.image)
 
         lateinit var imageObject: ImageObject
         init {
